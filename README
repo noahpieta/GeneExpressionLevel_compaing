@@ -1,0 +1,10 @@
+#! my personal notes for gene expression level comparing between two groups of samples
+# reorgnized: noah yu zhang
+
+# tools: hisat2, featureCounts, DESeq2
+
+# last update: 30-7-2018
+
+# email: noah.pieta@gmail.com
+
+
