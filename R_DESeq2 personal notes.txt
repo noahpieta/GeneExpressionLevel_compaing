@@ -2,7 +2,38 @@
 # R DESeq2 personal record
 
 #1 input files of DESeq2
-#  many kinds of input files for DESeq2, HT-Seq read counts, read counts matrix (featurecounts), expression abundance (salmon,salifish,kallisto ...) matrix
+#  many kinds of input files for DESeq2, HT-Seq read counts, read counts matrix (featurecounts), expression abundance (quantified by salmon,salifish,kallisto ...) matrix
 #  all input file must be read counts, without normalized.
 
-#2 
+## for HT-Seq
+
+## for featureCounts
+library(DESeq)
+
+
+
+
+## for 
+
+
+
+
+#2 pre-filter
+
+
+#3
+
+#4 different expression analysis
+dds <- DESeq(dds)
+res <- results(dds)
+
+# two commands below are equivalent for specifying coefficent or contrast
+res <- results(dds, name="condition_treated_vs_untreated")
+res <- results(dds, contrast=c("condition","treated","untreated"))
+
+
+#5 Independent hypothesis weighting (IHW) 
+# Ignatiadis, N., Klaus, B., Zaugg, J.B., Huber, W. (2016) Data-driven hypothesis weighting increases detection power in genome-scale multiple testing. Nature Methods, 13:7. 10.1038/nmeth.3885
+library("IHW")
+resIHW <- results(dds, filterFun=ihw)
+summary(resIHW)
