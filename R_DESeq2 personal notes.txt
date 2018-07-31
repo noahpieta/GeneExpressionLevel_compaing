@@ -1,0 +1,8 @@
+#!
+# R DESeq2 personal record
+
+#1 input files of DESeq2
+#  many kinds of input files for DESeq2, HT-Seq read counts, read counts matrix (featurecounts), expression abundance (salmon,salifish,kallisto ...) matrix
+#  all input file must be read counts, without normalized.
+
+#2 
