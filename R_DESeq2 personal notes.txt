@@ -31,7 +31,6 @@ res <- results(dds)
 res <- results(dds, name="condition_treated_vs_untreated")
 res <- results(dds, contrast=c("condition","treated","untreated"))
 
-
 #5 Independent hypothesis weighting (IHW) 
 # Ignatiadis, N., Klaus, B., Zaugg, J.B., Huber, W. (2016) Data-driven hypothesis weighting increases detection power in genome-scale multiple testing. Nature Methods, 13:7. 10.1038/nmeth.3885
 library("IHW")
